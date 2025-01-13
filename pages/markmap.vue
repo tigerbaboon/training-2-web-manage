@@ -17,7 +17,6 @@
 
     <!-- การแสดงผลลัพธ์ -->
     <div v-if="responseVisible" class="response">
-      <pre>{{ response }}</pre>
     </div>
   </div>
 </template>
