@@ -88,9 +88,9 @@ const listicon = ref<any>([
   { icon: "mingcute:safe-box-fill" },
   { icon: "mdi:broom" },
   { icon: "ph:chair-fill" },
-  { icon: "material-symbols:table-bar"},
-  { icon: "mdi:wardrobe"},
-  { icon: "mdi:stove"}
+  { icon: "material-symbols:table-bar" },
+  { icon: "mdi:wardrobe" },
+  { icon: "mdi:stove" },
 ]);
 
 const onSubmit = async () => {
@@ -118,9 +118,9 @@ const onSubmit = async () => {
 
 const toggleSelect = (index: number) => {
   if (selectedIcons.value.includes(index)) {
-    selectedIcons.value = selectedIcons.value.filter((i) => i !== index);
+    selectedIcons.value = [];
   } else {
-    selectedIcons.value.push(index);
+    selectedIcons.value = [index];
   }
 };
 
