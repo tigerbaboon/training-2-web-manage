@@ -142,7 +142,6 @@
                 id="Product_details"
               >
               </textarea>
-              <pre></pre>
               <div class="w-full md:w-[700px] my-2">
                 <MarkMapApi
                   class="h-[400px]"

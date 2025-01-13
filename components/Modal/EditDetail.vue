@@ -100,8 +100,7 @@ const listicon = ref<any>([
   { icon: "mdi:wardrobe" },
   { icon: "mdi:stove" },
   { icon: "material-symbols:dishwasher" },
-  { icon: "mdi:sink"},
-  
+  { icon: "mdi:sink" },
 ]);
 
 const emit = defineEmits(["close", "updateEdit"]);
@@ -139,9 +138,9 @@ const onUpdate = async (id: string) => {
 
 const toggleSelect = (index: number) => {
   if (selectedIcons.value.includes(index)) {
-    selectedIcons.value = selectedIcons.value.filter((i) => i !== index);
+    selectedIcons.value = [];
   } else {
-    selectedIcons.value.push(index);
+    selectedIcons.value = [index];
   }
 };
 

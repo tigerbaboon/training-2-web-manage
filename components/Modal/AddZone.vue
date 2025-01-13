@@ -41,10 +41,6 @@
               />
             </div>
           </div>
-          <pre>
-            1. ลากหมุดไปยังตำแหน่งที่ต้องการ
-            {{ lat }} {{ lng }}
-          </pre>
           <MarkMapApi
             class="h-[400px] w-[700px]"
             @update:latLng="updateLatLng"
