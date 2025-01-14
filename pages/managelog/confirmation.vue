@@ -141,6 +141,20 @@
             </p>
           </div>
           <div class="flex justify-end gap-4">
+            <div class="flex justify-center gap-4">
+              <button
+                class="bg-green-500 rounded-lg p-2 text-gray-50"
+                @click="UpdateConfirm(result, 'approved')"
+              >
+                ยืนยัน
+              </button>
+              <button
+                class="bg-rose-500 rounded-lg p-2 text-gray-50"
+                @click="UpdateConfirm(result, 'rejected')"
+              >
+                ยกเลิก
+              </button>
+            </div>
             <button
               class="border border-yellow-500 px-1 pt-1 rounded-md"
               @click="router.push(`/managelog/edithome/${result.id}`)"

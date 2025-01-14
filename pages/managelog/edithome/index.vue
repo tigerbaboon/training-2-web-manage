@@ -150,14 +150,14 @@
           v-for="(result, i) in getHouse?.datas"
           :key="i"
         >
-          <div class="w-full h-[150px] mb-3">
-            <!-- แก้interface -->
+          <!-- <div class="w-full h-[150px] mb-3">
+            แก้interface
             <img
               class="w-full h-full rounded-md object-cover"
               :src="result?.images_main?.url"
               alt="รูปหน้าปก"
             />
-          </div>
+          </div> -->
           <div
             class="flex items-center justify-end gap-2 bg-gray-100 px-2 py-1 rounded-md shadow-md"
           >
@@ -191,12 +191,12 @@
               }}</span>
             </p>
             <!-- แก้interface -->
-            <p class="text-sm text-gray-600">
+            <!-- <p class="text-sm text-gray-600">
               ลงประกาศเมื่อ:
               <span class="font-medium text-sky-950">
                 {{ formatUnixTime(result.created_at) }}
               </span>
-            </p>
+            </p> -->
           </div>
           <div class="flex justify-end gap-4">
             <button

@@ -4,7 +4,7 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   app: {
     head: {
-      title: "khonhaen space",
+      title: "Khonkaen Space",
     },
   },
   modules: ["@nuxtjs/tailwindcss", "@pinia/nuxt", "@nuxt/icon"],

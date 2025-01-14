@@ -888,6 +888,7 @@ const props = defineProps({
 });
 
 const emit = defineEmits(["update:latLng"]);
+const router = useRouter();
 
 const activeTab = ref<string>("fromDetail");
 const house_name = ref<string>("");
@@ -915,7 +916,6 @@ const price = ref<number>(0);
 const line_id = ref<string>("");
 const lat = ref<number | null>(null);
 const lng = ref<number | null>(null);
-
 
 const updateLatLng = async (coords: { lat: number; lng: number }) => {
   lat.value = coords.lat;
@@ -988,7 +988,7 @@ const onSubmit = async () => {
         icon: "success",
         title: "ลงทะเบียนเรียบร้อย",
       });
-      
+      router.back();
     }
   } catch (error: any) {
     Swal.fire({
