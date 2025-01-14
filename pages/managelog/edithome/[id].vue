@@ -969,7 +969,6 @@ definePageMeta({
   layout: "register",
 });
 
-import axios from "axios";
 
 const lat = ref<number>(0);
 const lng = ref<number>(0);
