@@ -40,7 +40,7 @@ const getZoneData = async () => {
 const updateChart = (data: any[]) => {
   const xValues = data.map((item) => item.zone_name);
   const yValues = data.map((item) => item.count);
-  const barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9" , "#673ab7"   ]; // Adjust colors as needed
+  const barColors = ["#b91d47", "#00aba9", "#2b5797", "#e8c3b9" , "#673ab7" , "#f06292" , "#512da8" , "#8e24aa" , "#00acc1" , "#dce775" , "#558b2f" , "#f4511e" , "#5d4037"     ]; // Adjust colors as needed
 
   new Chart("ZoneProductionChart", {
     type: "pie",
