@@ -1217,7 +1217,7 @@ const handleMultipleImageUpload3 = async (event: Event) => {
 };
 
 const deleteImage = (payload: any, index: number) => {
-  payload.splice(index, 1);
+  payload.splice(index, index+1);
 };
 
 function updateMap(): void {
