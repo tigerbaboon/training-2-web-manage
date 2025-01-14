@@ -119,8 +119,8 @@
       <div class="h-screen min-h-screen overflow-y-auto">
         <div class="bg-white shadow-lg rounded-lg p-4 mb-2 border border-gray-300 grid grid-cols-2 "
           v-for="(result, i) in items" :key="i">
-          <div class="w-full max-w-[120px] h-[80px] overflow-hidden rounded-lg " v-for="img in result?.image">
-            <img class="w-full h-full object-cover" :src="img?.url" alt="รูปโซน" />
+          <div class="w-full max-w-[120px] h-[80px] overflow-hidden rounded-lg " >
+            <img class="w-full h-full object-cover" :src="result.images.url" alt="รูปโซน" />
           </div>
           <div class="space-y-3 flex flex-col justify-between">
             <p class="text-gray-800 text-sm font-semibold truncate">
