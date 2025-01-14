@@ -1001,8 +1001,8 @@ interface ItemDetail {
 
 const itemsDetail = ref<ItemDetail[]>([]);
 const item_detail = ref<string[]>([]);
-const price = ref<number>(0);
 const newArray = ref<string[]>([]);
+const router = useRouter();
 
 // ฟังชั้นการกด Enter เเล้วเว้นบรรทัด
 const formattedMessage = computed(() => {
@@ -1069,14 +1069,8 @@ const updateByHome = async (id: string) => {
       getHouse.value.datas.contact_info.phone_number
     );
     formdata.append("line_id", getHouse.value.datas.contact_info.line_id);
-    formdata.append(
-      "location_latitute",
-      lat.value?.toString()
-    );
-    formdata.append(
-      "location_longitute",
-      lng.value?.toString()  
-    );
+    formdata.append("location_latitute", lat.value?.toString());
+    formdata.append("location_longitute", lng.value?.toString());
     formdata.append("remainingImageIDs", remainingImageIDs);
     formdata.append("remainingImageMainID", remainingImageMainID);
 
@@ -1086,6 +1080,7 @@ const updateByHome = async (id: string) => {
         icon: "success",
         title: "แก้ไขสำเร็จ",
       });
+      router.back();
     } else {
       throw new Error("Failed to update data");
     }
@@ -1217,7 +1212,7 @@ const handleMultipleImageUpload3 = async (event: Event) => {
 };
 
 const deleteImage = (payload: any, index: number) => {
-  payload.splice(index, index+1);
+  payload.splice(index, index + 1);
 };
 
 function updateMap(): void {
